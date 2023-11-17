@@ -25,3 +25,8 @@ notepad $PROFILE
 . $PROFILE
 ```
 
+### Find the location of your $PROFILE:
+```powershell
+$PROFILE.CurrentUserCurrentHost
+```
+
