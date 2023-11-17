@@ -1,0 +1,17 @@
+function Touch-File {
+    param (
+        [Parameter(Mandatory=$true)]
+        [string]$filePath
+    )
+
+    if (-not (Test-Path -Path $filePath)) {
+        # If the file doesn't exist, create it
+        New-Item -ItemType File -Path $filePath -Force | Out-Null
+    } else {
+        # If the file exists, update its last write time to the current time
+        (Get-Item $filePath).LastWriteTime = Get-Date
+    }
+}
+
+Set-Alias -Name touch -Value Touch-File -Option AllScope -Force
+
