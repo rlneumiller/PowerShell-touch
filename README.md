@@ -1,5 +1,3 @@
-Here is the markdown formatted text:
-
 # PowerShell-touch
 This PowerShell function creates an alias that functions like a rudimentary GNU coreutils touch. The function will create the file specified if it doesn't exist (and you have permission) or it will modify last modified time if the file already exists.
 
